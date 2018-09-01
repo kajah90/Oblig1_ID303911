@@ -36,6 +36,7 @@ and open the template in the editor.
     height: 450px;
     overflow-y: scroll;
     border-bottom: 1.5px solid black;
+    text-align: left;
 }
 
 #chatsContainer > #textbox {
@@ -48,4 +49,15 @@ and open the template in the editor.
 }
 body {
     text-align: center;
+}
+
+/*messages in chat, style borrowed from W3schools.com*/
+#chatMessage {
+    
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    
 }
