@@ -15,6 +15,10 @@ function postMessage(message) {
     post.innerHTML = "You: " + message;
     console.log(post);
     screen = document.getElementById("chat");
-    screen.appendChild(post);
+    //to make the window stay at the bottom with new messages, i had to reverse the scroll in css, 
+    //but then the elements were added at the top of the screen, 
+    //due to reversal, so i had to fix that here, with insertBefore instead of appendChild
+    screen.insertBefore(post, screen.firstChild);
+    //screen.appendChild(post); 
   
 }
