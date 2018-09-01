@@ -31,7 +31,7 @@ and open the template in the editor.
     padding: 0;
 }
 
-#chatsContainer > #earlierChats {
+#chatsContainer > #earlierChats, #chat {
     width: 100%;
     height: 450px;
     overflow-y: scroll;
