@@ -6,11 +6,17 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>New chat</title>
+        <link rel='stylesheet' type='text/css' href='clientCss.css'>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        <div id="formWrapper">
+            <p>Your name: </p><input name='yourName' type='text' id="yourName" placeholder="What's your name" />
+            <p>Who will you talk too? Separate names with a comma: </p> <input name='recipients' type='text' id="recipients" placeholder="Who will you talk too?" />
+            <input name="start" type="submit"  id="start" value="Send" onclick="dummyFunction()" />
+        </div>
+        <script src="clientJS.js"></script>
     </body>
 </html>

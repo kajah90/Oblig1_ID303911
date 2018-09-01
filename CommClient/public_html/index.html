@@ -19,6 +19,16 @@ and open the template in the editor.
             </div>
             <div id="earlierChats"></div>    
         </div>
-        <p>New Chat</p>
+        <button onclick="document.getElementById('chatModal').style.display='block'">New Chat</button>
+        <div id="chatModal">
+            <div id="chatModal-content">
+                <div id="formWrapper">
+                    <p>Your name: </p><input name='yourName' type='text' id="yourName" placeholder="What's your name" />
+                    <p>Who will you talk too? Separate names with a comma: </p> <input name='recipients' type='text' id="recipients" placeholder="Who will you talk too?" />
+                    <input name="start" type="submit"  id="start" value="Send" onclick="dummyFunction()" />
+                </div>
+                <button onclick="document.getElementById('chatModal').style.display='none'">Cansel</button>
+            </div>
+        </div>
     </body>
 </html>
