@@ -8,3 +8,30 @@ and open the template in the editor.
     Author     : Kajah
 */
 
+* {
+    /*Include padding and border in the element's total width and height*/
+    box-sizing: border-box;
+}
+#chatsContainer {
+    width: 450px;
+    height: 550px;
+    border: 1.5px solid black;
+}
+
+#chatsContainer > #chatsTitle {
+    width: 100%;
+    background: white;
+    padding: 10px;
+    border-bottom: 1.5px solid black;
+}
+
+#chatsContainer > #chatsTitle h3 {
+    margin: 0;
+    padding: 0;
+}
+
+#chatsContainer > #earlierChats {
+    width: 100%;
+    height: 500px;
+    overflow-y: scroll;
+}
