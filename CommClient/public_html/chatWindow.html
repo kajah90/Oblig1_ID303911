@@ -14,6 +14,10 @@ and open the template in the editor.
         <div id='textbox'>
             <input name='sendtMessage' type='text' id="sendtMessage" placeholder="Type your message here" />
             <input name="sendmsg" type="submit"  id="sendmsg" value="Send" onclick="postMessage('sendtMessage')" />
+            <label for="file">Choose file</label>
+            <input type="file" id="file" name="file" accept=".jpg, .jpeg, .png">
+            <button>Submit</button>
+            <div class="preview">
         </div>
         <button id="backButton" onclick="goToNewScreen('startScreen.html', 'startScreenJS.js')">Back</button>
     </div>
