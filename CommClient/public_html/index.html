@@ -12,23 +12,7 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <h2>SmallChat v1.0</h2>
-        <div id="chatsContainer">
-            <div id="chatsTitle">
-                <h3>Earlier Chats</h3>
-            </div>
-            <div id="earlierChats"></div>    
-        </div>
-        <button onclick="document.getElementById('chatModal').style.display='block'">New Chat</button>
-        <div id="chatModal">
-            <div id="chatModal-content">
-                <div id="formWrapper">
-                    <p>Your name: </p><input name='yourName' type='text' id="yourName" placeholder="What's your name" />
-                    <p>Who will you talk too? Separate names with a comma: </p> <input name='recipients' type='text' id="recipients" placeholder="Who will you talk too?" />
-                    <input name="start" type="submit"  id="start" value="Send" onclick="dummyFunction()" />
-                </div>
-                <button onclick="document.getElementById('chatModal').style.display='none'">Cansel</button>
-            </div>
-        </div>
+        <script src="clientJS.js"></script>
+        <script>goToNewScreen("startScreen.html", "startScreenJS.js");</script>
     </body>
 </html>

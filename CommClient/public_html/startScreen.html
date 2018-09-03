@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<div id="startScreen">
+    <h2>SmallChat v1.0</h2>
+    <div id="chatsContainer">
+        <div id="chatsTitle">
+            <h3>Earlier Chats</h3>
+        </div>
+        <div id="earlierChats"></div>    
+    </div>
+    <button id="newChatButton" onclick="document.getElementById('chatModal').style.display='block'">New Chat</button>
+    <div id="chatModal">
+        <div id="chatModal-content">
+            <div id="formWrapper">
+                <!--<p>Your name: </p><input name='yourName' type='text' id="yourName" placeholder="What's your name" /> -->
+                <p>Who will you talk too? Separate names with a comma: </p> <input name='recipients' type='text' id="recipients" placeholder="Who will you talk too?" />
+                <input name="start" type="submit"  id="start" value="Send" onclick="initiateChat('recipients')" />
+            </div>
+            <button  onclick="document.getElementById('chatModal').style.display='none'">Cansel</button>
+        </div>
+    </div>
+</div>

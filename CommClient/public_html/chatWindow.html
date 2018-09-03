@@ -4,24 +4,17 @@ To change this license header, choose License Headers in Project Properties.
 To change this template file, choose Tools | Templates
 and open the template in the editor.
 -->
-<html>
-    <head>
-        <title>Chat Window</title>
-        <link rel='stylesheet' type='text/css' href='clientCss.css'>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div id="chatsContainer">
-            <div id="chatsTitle">
-                <h3>Chat</h3>
-            </div>
-            <div id="chat"></div>
-            <div id='textbox'>
-                <input name='sendtMessage' type='text' id="sendtMessage" placeholder="Type your message here" />
-                <input name="sendmsg" type="submit"  id="sendmsg" value="Send" onclick="postMessage('sendtMessage')" />
-            </div>
+<div id="chatWindow">
+    
+    <div id="chatsContainer">
+        <div id="chatsTitle">
+            <h3>Chat</h3>
         </div>
-        <script src="clientJS.js"></script>
-    </body>
-</html>
+        <div id="chat"></div>
+        <div id='textbox'>
+            <input name='sendtMessage' type='text' id="sendtMessage" placeholder="Type your message here" />
+            <input name="sendmsg" type="submit"  id="sendmsg" value="Send" onclick="postMessage('sendtMessage')" />
+        </div>
+        <button onclick="goToNewScreen('startScreen.html', 'startScreenJS.js')">Back</button>
+    </div>
+</div>

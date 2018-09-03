@@ -4,36 +4,50 @@
  * and open the template in the editor.
  */
 
-var screen;
-var allChats = new Array();
-var aChat;
+
+var gameScreen = document.createElement('div');
+gameScreen.id = "gameScreen";
+document.body.insertBefore(gameScreen, document.body.firstChild);
 
 
-createChat("Per, Kurt");
-function createChat(chatMembers) {
-    var names = document.createElement("p");
-    names.style.wordWrap = "break-word";
-    names.innerHTML = "Chatting with: " + chatMembers;
-    screen = document.getElementById("chat");
-    console.log(names);
-    screen.insertBefore(names, screen.firstChild);
-}
-function postMessage(messageValue) {
+//function recieveMessage(message) {
+    //TODO later, when working on server
     
-    //TODO later, send message to server
-    var message = document.getElementById(messageValue).value;
-    var post = document.createElement("p");
-    post.id = 'chatMessage';
-    post.style.wordWrap = "break-word";
-    post.innerHTML = "You: " + message;
-    console.log(post);
-    screen = document.getElementById("chat");
-    //to make the window stay at the bottom with new messages, i had to reverse the scroll in css, 
-    //but then the elements were added at the top of the screen, 
-    //due to reversal, so i had to fix that here, with insertBefore instead of appendChild
-    screen.insertBefore(post, screen.firstChild);
-    //clear text area after submit
-    document.getElementById(messageValue).value = "";
-    //screen.appendChild(post); 
-  
+//}
+
+
+
+//fade in function for when we load in a new page
+function fadeIn(element) {
+    element.style.opacity = 0;
+    var op = 0.2;  // initial opacity
+    var timer = setInterval(function () {
+        if (op >= 1) {
+            clearInterval(timer);
+        }
+        element.style.opacity = op;
+        op += 0.03;
+    }, 10);
 }
+
+//function we made in arlier project, for AJAX, loading just html into the <body> tag
+function goToNewScreen(html, js) {
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+        if (this.readyState === 4 && this.status === 200) {
+
+            gameScreen.innerHTML = this.responseText;
+            fadeIn(gameScreen);
+            var script = document.createElement('script');
+            script.type = 'text/javascript';
+            script.src = js;
+            gameScreen.append(script);
+
+        }
+    };
+    xhttp.open("GET", html, true);
+    xhttp.send();
+}
+
+
+
