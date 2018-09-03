@@ -35,7 +35,7 @@ function loadEarlierChats() {
             var post = document.createElement("p");
             var tempString = "Chatted with: " + chatName + "<br>" + "Last Message: " + lastMessage;
             post.id = chatName;
-            post.class = 'earlierChat';
+            post.className = 'earlierChat';
             post.style.wordWrap = "break-word";
             post.innerHTML = tempString;
             showMessage(post);

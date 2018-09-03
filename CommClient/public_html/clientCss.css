@@ -52,7 +52,7 @@ body {
 }
 
 /*messages in chat, style borrowed from W3schools.com*/
-#chatMessage, .earlierChat {
+#chatMessage {
     
     border: 2px solid #dedede;
     background-color: #f1f1f1;
@@ -60,6 +60,14 @@ body {
     padding: 10px;
     margin: 10px 0;
     
+}
+
+.earlierChat {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
 }
 /*reverse scroll to stay at bottom, had to reverse childElement order to make new chat messages apear at bottom, in*/
 #chat {
@@ -97,6 +105,6 @@ body {
     padding-bottom: 20px;
 
 }
-#backButton, #newChatButton {
+#backButton, .newChatButton {
     margin-top: 20px;
 }
