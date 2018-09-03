@@ -75,6 +75,7 @@ function loadChat() {
             var post = document.createElement("p");
             var tempString = chatLog[i];
             post.style.wordWrap = "break-word";
+            post.id = 'chatMessage';
             post.innerHTML = tempString;
             showMessage(post); 
             
