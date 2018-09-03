@@ -84,3 +84,24 @@ function loadChat() {
         
     }
 }
+
+//to render image in chat, code snippet from
+//https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL
+//
+function sendImage() {
+    
+    var img = document.createElement("img");
+    var file    = document.querySelector('input[type=file]').files[0];
+    var reader  = new FileReader();
+    
+    reader.addEventListener("load", function () {
+        img.src = reader.result;
+    }, false);
+    
+    if (file) {
+        reader.readAsDataURL(file);
+    }
+    img.style.height = '150px';
+    img.style.width = '100px';
+  showMessage(img);  
+}

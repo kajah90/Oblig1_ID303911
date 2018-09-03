@@ -108,3 +108,7 @@ body {
 #backButton, .newChatButton, #file {
     margin-top: 20px;
 }
+img {
+   margin-top: 20px;
+   margin-left: 10px;
+}
