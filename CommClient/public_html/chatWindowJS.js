@@ -5,7 +5,7 @@
  */
 var screen;
 var thisChatName = localStorage.getItem('chatName');
-localStorage.removeItem('chatName');
+    localStorage.removeItem('chatName');
 
 loadChat();
 function postMessage(messageValue) {
@@ -59,6 +59,7 @@ function addToLocalStorageArray(name, value) {
 
 function loadChat() {
     var chatLog;
+    
     if(localStorage.getItem(thisChatName)=== null) {      
         var post = document.createElement("p");
         var tempString = "New chat with " + thisChatName;

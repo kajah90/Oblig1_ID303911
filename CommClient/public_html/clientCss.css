@@ -52,7 +52,7 @@ body {
 }
 
 /*messages in chat, style borrowed from W3schools.com*/
-#chatMessage {
+#chatMessage, .earlierChat {
     
     border: 2px solid #dedede;
     background-color: #f1f1f1;

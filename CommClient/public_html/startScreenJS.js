@@ -34,10 +34,15 @@ function loadEarlierChats() {
             var lastMessage = wholeChat[wholeChat.length - 1];
             var post = document.createElement("p");
             var tempString = "Chatted with: " + chatName + "<br>" + "Last Message: " + lastMessage;
-            post.id = 'earlierChat';
+            post.id = chatName;
+            post.class = 'earlierChat';
             post.style.wordWrap = "break-word";
             post.innerHTML = tempString;
             showMessage(post);
+            post.addEventListener('click', function (event) {
+                localStorage.setItem('chatName', this.id);
+                goToNewScreen('chatWindow.html', 'chatWindowJS.js');
+            });
         }
     }
 }
